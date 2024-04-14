@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "50808215-7a29-482a-8046-9817dcb89e1b",
+		"name": "GraphQL-Java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5074949"
+	},
+	"item": [
+		{
+			"name": "createAuthor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\n    createAuthor(name: \"shubham\") {\n        id\n        name\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    authors {\n        id\n        name\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    authorById(id: 1) {\n        id\n        name\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAuthorById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\n    updateAuthorById(authorId: 1, name: \"shubham\") {\n        id\n        name\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAuthorById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\n    deleteAuthorById(authorId: 2) {\n        id\n        name\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\n    createBook(name: \"test\", totalPages: 100, authorId: 1) {\n        id\n        name\n        pageCount\n        author {\n            id\n            name\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    books {\n        id\n        name\n        pageCount\n        author {\n            id\n            name\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    bookById(id: 1) {\n        id\n        name\n        pageCount\n        author {\n            id\n            name\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createBook Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\n    createBook(name: \"test\", totalPages: 100, authorId: 1) {\n        id\n        name\n        pageCount\n        author {\n            id\n            name\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

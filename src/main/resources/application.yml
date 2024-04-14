@@ -1,0 +1,20 @@
+server:
+    port: 8080
+
+spring:
+    application:
+        name: graphql-java
+    datasource:
+        hikari:
+            conserversenteventsnectionTimeout: 30000
+            idleTimeout: 600000
+            maxLifetime: 1800000
+        password: root1234
+        url: jdbc:mysql://localhost:3306/graphql-java?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false&autoReconnect=true&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
